@@ -87,7 +87,8 @@ html.land #tb{display:none}
 @keyframes vtout{to{opacity:0;transform:scale(1.012)}}
 @keyframes vtin{from{opacity:0;transform:scale(.988)}}
 #tb{display:none}
-@media (max-width:700px){
+@media (max-width:700px),(max-aspect-ratio:1/1){
+ #c .navw{display:none}
  #tb{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;gap:2px;padding:5px;border-radius:999px;background:rgba(239,238,215,.95);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(0,0,0,.3)}
  #tb a{padding:11px 15px;border-radius:999px;color:#8b0000;text-decoration:none;font:300 13px/1 'Encode Sans Condensed','Arial Narrow',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;-webkit-tap-highlight-color:transparent}
  #tb a[aria-current]{background:#8b0000;color:#efeed7}
