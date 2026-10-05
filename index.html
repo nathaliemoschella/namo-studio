@@ -33,13 +33,13 @@
 .sl .hd i{position:absolute;left:-1px;top:0;width:3px;height:100%;background:#efeed7;box-shadow:0 0 8px rgba(0,0,0,.45)}
 .sl .hd b{position:absolute;left:0;top:var(--gy,42%);width:clamp(34px,4.4vw,84px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:#efeed7;border:3px solid #8b0000;box-shadow:0 2px 12px rgba(0,0,0,.4);display:grid;place-items:center;color:#8b0000;font:900 clamp(13px,1.9vw,34px)/1 Arial,sans-serif;letter-spacing:-.05em}
 .sl.act .hd b{transform:translate(-50%,-50%) scale(1.12)}
-/* laptop: cap very wide screens */
-#app{max-width:2200px;margin:0 auto}
+/* laptop: never stretch the 1920px artwork past its real size */
+#app{max-width:1920px;margin:0 auto}
 /* iPhone: pages are 1920px-wide artwork, so render them larger and pan sideways inside #app */
 @media (max-width:700px){
 #app{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain}
 #app::-webkit-scrollbar{display:none}
-#app>.pg{width:235vw}
+#app>.pg{width:165vw}
 #app>#s,#app>#n{width:max(100vw,calc(100svh*1920/1080));min-height:100svh}
 #app>#s img.f,#app>#n img.f{height:100%;object-fit:cover}
 #app>#c{width:100vw}
