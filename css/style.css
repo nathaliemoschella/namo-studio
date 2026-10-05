@@ -103,8 +103,9 @@ a.ic:hover{transform:translateY(-4px)}
 
 /* ---------- HERO de proyecto ---------- */
 .hero{position:relative;width:100%;color:#fff;background:#3a2a22;overflow:hidden;height:clamp(380px,72svh,760px)}
-@media (max-width:899px){ .hero{height:auto;aspect-ratio:1/1;max-height:none} }
-@media (min-width:900px){ .hero{height:auto;aspect-ratio:1920/1009;max-height:100svh} }
+/* misma proporción y posiciones que en laptop, en todos los tamaños */
+.hero{height:auto;aspect-ratio:1920/1009}
+@media (min-width:900px){ .hero{max-height:100svh} }
 .hero>img{width:100%;height:100%;object-fit:cover;object-position:var(--fx,50%) 50%}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(30,12,6,.35),rgba(30,12,6,0) 36%);pointer-events:none}
 .ht{position:absolute;z-index:2;left:0;right:0;padding:0 var(--pad);text-shadow:0 2px 28px rgba(30,15,8,.35)}
@@ -119,7 +120,7 @@ a.ic:hover{transform:translateY(-4px)}
 .ht.center{top:30%}
 .ht.center p{margin-inline:auto;text-align:center}
 .ht.bl-sub{top:30%} .ht.bl-sub p{margin-left:auto;margin-right:8%;text-align:left}
-@media (max-width:899px){ .ht.mid,.ht.center,.ht.bl-sub{top:28%} .ht.mid p,.ht.bl-sub p{margin-right:0;margin-left:auto} .ht h1{font-size:clamp(34px,11.5vw,70px)} .ht.low h1{font-size:clamp(28px,8vw,56px)} }
+@media (max-width:899px){ .ht h1{font-size:10.8vw} .ht.low h1{font-size:6.4vw} .ht p{font-size:max(9.5px,2.5vw);letter-spacing:.05em;margin-top:.6em} .ht.mid p{margin-right:8%} .ht.sub-br p,.ht.low p{font-size:max(9.5px,2.4vw)} }
 .ht.sub-br{bottom:clamp(20px,8%,80px);top:auto}
 .ht.sub-br p{margin-left:auto;text-align:left;max-width:12em}
 
