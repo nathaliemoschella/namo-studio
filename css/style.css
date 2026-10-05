@@ -103,6 +103,7 @@ a.ic:hover{transform:translateY(-4px)}
 
 /* ---------- HERO de proyecto ---------- */
 .hero{position:relative;width:100%;color:#fff;background:#3a2a22;overflow:hidden;height:clamp(380px,72svh,760px)}
+@media (max-width:899px){ .hero{height:auto;aspect-ratio:1/1;max-height:none} }
 @media (min-width:900px){ .hero{height:auto;aspect-ratio:1920/1009;max-height:100svh} }
 .hero>img{width:100%;height:100%;object-fit:cover;object-position:var(--fx,50%) 50%}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(30,12,6,.35),rgba(30,12,6,0) 36%);pointer-events:none}
@@ -131,7 +132,8 @@ a.ic:hover{transform:translateY(-4px)}
 @media (max-width:899px){
   .gal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin-inline:calc(var(--pad)*-1);padding-inline:var(--pad);scroll-padding-inline:var(--pad);-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .gal::-webkit-scrollbar{display:none}
-  .gal a{flex:0 0 min(62vw,320px);scroll-snap-align:start}
+  .gal a{flex:0 0 auto;aspect-ratio:auto;scroll-snap-align:start}
+  .gal img{width:auto;height:clamp(240px,68vw,420px);max-width:none;object-fit:contain}
 }
 
 /* ---------- bloques ---------- */
